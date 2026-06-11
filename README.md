@@ -80,3 +80,15 @@ public boolean isLeeg() {
 public boolean isVol() {
     return bewerkingenStack.size() >= MAX_BEWERKINGEN;
 }
+
+
+private final int MIN_BEWERKINGEN = 4;
+private final int MAX_BEWERKINGEN = 10;
+
+public boolean pushBewerking(Bewerking bewerking) {
+    if (bewerkingStack.size() < MAX_BEWERKINGEN) {
+        bewerkingStack.push(bewerking);
+        return true;
+    }
+    return false;
+}
